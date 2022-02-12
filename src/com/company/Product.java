@@ -17,17 +17,7 @@ public class Product {
         this.category = category;
         this.soldQuantity = soldQuantity;
     }
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                ", category=" + category +
-                ", soldQuantity=" + soldQuantity +
-                '}';
-    }
+
 
     public long getId() {
         return id;
@@ -75,5 +65,17 @@ public class Product {
 
     public void setSoldQuantity(int soldQuantity) {
         this.soldQuantity = soldQuantity;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", category=" + category +
+                ", soldQuantity=" + soldQuantity +
+                '}';
     }
 }

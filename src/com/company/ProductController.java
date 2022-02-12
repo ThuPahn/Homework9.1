@@ -36,29 +36,17 @@ public class ProductController {
 
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
-                case 1:
-                    service.showProducts(products);
-                    break;
-                case 2:
-                    addProduct();
-                    break;
-                case 3:
+                case 1 -> service.showProducts(products);
+                case 2 -> addProduct();
+                case 3 -> {
                     System.out.println("Nhập tên sản phẩm: ");
                     String searchName = sc.nextLine();
                     service.searchProductsByName(products, searchName);
-                    break;
-                case 4:
-                    getProductById();
-                    break;
-                case 5:
-                    showProductsByCategory();
-                    break;
-                case 0:
-                    isContinue = false;
-                    break;
-                default:
-                    System.out.println("Không có lựa chọn này");
-                    break;
+                }
+                case 4 -> getProductById();
+                case 5 -> showProductsByCategory();
+                case 0 -> isContinue = false;
+                default -> System.out.println("Không có lựa chọn này");
             }
         }
     }
